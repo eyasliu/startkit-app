@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "gulp dev",
-    "dev": "concurrent -k -r \"gulp dev\" \"sails lift\""
+    "dev": "concurrent -k -r \"gulp dev\""
   },
   "main": "app/build/app.js",
   "repository": {
