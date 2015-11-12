@@ -23,7 +23,7 @@ module.exports = {
       ...common.module.loaders,
       {
         test: /\.(js|jsx)$/,
-        loaders: ['react-hot','babel?presets[]=react,presets[]=stage-0'],
+        loaders: ['react-hot','babel'],
         include: path.join(__dirname, 'app/src'),
         exclude: [path.join(__dirname,'node_modules'),path.join(__dirname,'app/src/vendor')]
       }
