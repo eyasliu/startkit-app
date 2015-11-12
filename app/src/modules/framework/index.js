@@ -1,6 +1,7 @@
 import React from 'react'
+import 'common/style'
 import APPModule from './components/moduleContainer'
-import Navbar from './components/navbar'
+
 
 export default class FrameWork extends React.Component{
   constructor(){

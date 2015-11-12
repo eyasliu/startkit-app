@@ -12,11 +12,10 @@ export default class Navbar extends Component{
   render(){
     return (
       <div>
-      {this.props.text}
+        {this.props.text}
         <ul>
         <li><Link to="/example">example</Link></li>
         <li><Link to="/">Home</Link></li>
-
         </ul>
         {this.props.chidlren}
       </div>
