@@ -12,7 +12,7 @@ let commonConfig = {
       modules: path.join(__dirname, 'app/src/modules'),
       utils: path.join(__dirname, 'app/src/utils'),
       framework: path.join(__dirname, 'app/src/modules/framework'),
-
+      example: path.join(__dirname, 'app/src/modules/example'),
     },
   },
   output: {

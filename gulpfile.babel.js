@@ -15,7 +15,7 @@ gulp.task('dev',()=>{
     publicPath: webpackDevConfig.output.publicPath,
     hot: true,
     quiet: true,
-    // historyApiFallback: true,
+    historyApiFallback: true,
     noInfo: true,
     inline:true,
     stats: {

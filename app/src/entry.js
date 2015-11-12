@@ -1,8 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import AppRouter from './router'
 
-import Framework from 'framework'
-
-console.log(Framework)
-
-ReactDOM.render(<Framework />,document.getElementById('app'))
+ReactDOM.render(AppRouter,document.getElementById('app'))

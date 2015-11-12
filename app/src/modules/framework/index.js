@@ -1,16 +1,18 @@
 import React from 'react'
+import APPModule from './components/moduleContainer'
+import Navbar from './components/navbar'
 
 export default class FrameWork extends React.Component{
   constructor(){
     super()
   }
-  static defaultProps = {
-    text:'Eyas'
-  }
 
   render(){
     return(
-      <h1>Hello ,{this.props.text}</h1>
+      <div>
+      <Navbar />
+        {this.props.children}
+      </div>
     )
   }
 

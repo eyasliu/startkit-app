@@ -19,16 +19,19 @@ module.exports = {
   },
   resolve: common.resolve,
   module: {
-    loaders: common.module.loaders.concat([
+    loaders: [
+      ...common.module.loaders,
       {
         test: /\.(js|jsx)$/,
         loaders: ['react-hot','babel?presets[]=react,presets[]=stage-0'],
         include: path.join(__dirname, 'app/src'),
         exclude: [path.join(__dirname,'node_modules'),path.join(__dirname,'app/src/vendor')]
       }
-    ])
+    ]
   },
-  plugins: common.plugins.concat([
+  devtool:"source-map",
+  plugins: [
+    ...common.plugins,
     new webpack.HotModuleReplacementPlugin()
-  ])
+  ]
 }
