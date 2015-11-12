@@ -19,7 +19,7 @@ export default class FrameWork extends React.Component{
         <Provider store={store}>
           <APPModule children={this.props.children} />
         </Provider>
-        <Devtool store={store} />
+        {config.debug&&config.devtool&&<Devtool store={store} />}
       </div>
     )
   }
