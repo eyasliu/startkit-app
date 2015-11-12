@@ -18,6 +18,7 @@ export default class Navbar extends Component{
         <li><Link to="/">Home</Link></li>
 
         </ul>
+        {this.props.chidlren}
       </div>
     )
   }

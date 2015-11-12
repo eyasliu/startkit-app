@@ -9,10 +9,7 @@ export default class FrameWork extends React.Component{
 
   render(){
     return(
-      <div>
-      <Navbar />
-        {this.props.children}
-      </div>
+        <APPModule children={this.props.children} />
     )
   }
 
