@@ -4,8 +4,6 @@ import common from './webpack.common'
 import path from 'path'
 import config from './config'
 
-console.log('===============>',Array.isArray(common.module.loaders))
-
 module.exports = {
   entry: {
     note: [
@@ -14,7 +12,6 @@ module.exports = {
       './app/src/entry.js'
     ]
   },
-  debug:true,
   output: {
     path: path.join(__dirname, 'build'),
     filename: '[name].js',
@@ -25,9 +22,9 @@ module.exports = {
     loaders: common.module.loaders.concat([
       {
         test: /\.(js|jsx)$/,
-        loaders: ['react-hot-loader','babel-loader?stage=0'],
-        include: path.join(__dirname, 'src'),
-        exclude: [path.join(__dirname,'node_modules'),path.join(__dirname,'src/vendor')]
+        loaders: ['react-hot','babel?presets[]=react,presets[]=stage-0'],
+        include: path.join(__dirname, 'app/src'),
+        exclude: [path.join(__dirname,'node_modules'),path.join(__dirname,'app/src/vendor')]
       }
     ])
   },

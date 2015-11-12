@@ -6,15 +6,13 @@ let commonConfig = {
     root: path.join(__dirname, 'src/vendor'),
     extensions: ['', '.js', '.jsx', '.css', '.scss'],
     alias: {
-      src: path.join(__dirname, 'src'),
-      vendor: path.join(__dirname, 'src/vendor'),
-      common: path.join(__dirname, 'src/common'),
-      modules: path.join(__dirname, 'src/modules'),
-      utils: path.join(__dirname, 'src/utils'),
-      framework: path.join(__dirname, 'src/modules/framework'),
-      note: path.join(__dirname, 'src/modules/note'),
-      home: path.join(__dirname, 'src/modules/home'),
-      auth: path.join(__dirname, 'src/modules/auth'),
+      src: path.join(__dirname, 'app/src'),
+      vendor: path.join(__dirname, 'app/src/vendor'),
+      common: path.join(__dirname, 'app/src/common'),
+      modules: path.join(__dirname, 'app/src/modules'),
+      utils: path.join(__dirname, 'app/src/utils'),
+      framework: path.join(__dirname, 'app/src/modules/framework'),
+
     },
   },
   output: {
