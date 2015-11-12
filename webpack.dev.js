@@ -1,9 +1,10 @@
-var webpack = require('webpack');
-var _ = require('lodash');
-var common = require('./webpack.common.js');
-var path = require('path');
-var config = require('./config')
+import webpack from 'webpack'
+import _ from 'lodash'
+import common from './webpack.common'
+import path from 'path'
+import config from './config'
 
+console.log('===============>',Array.isArray(common.module.loaders))
 
 module.exports = {
   entry: {

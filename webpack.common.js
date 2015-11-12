@@ -1,7 +1,7 @@
-var webpack = require('webpack');
-var path = require('path');
+import webpack from 'webpack'
+import path from 'path'
 
-module.exports = {
+let commonConfig = {
   resolve: {
     root: path.join(__dirname, 'src/vendor'),
     extensions: ['', '.js', '.jsx', '.css', '.scss'],
@@ -11,7 +11,6 @@ module.exports = {
       common: path.join(__dirname, 'src/common'),
       modules: path.join(__dirname, 'src/modules'),
       utils: path.join(__dirname, 'src/utils'),
-
       framework: path.join(__dirname, 'src/modules/framework'),
       note: path.join(__dirname, 'src/modules/note'),
       home: path.join(__dirname, 'src/modules/home'),
@@ -76,3 +75,4 @@ module.exports = {
     // }),
   ]
 }
+export default commonConfig

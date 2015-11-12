@@ -1,4 +1,3 @@
-
 import gulp from 'gulp'
 import util from 'gulp-util'
 import webpack from 'webpack'
@@ -6,16 +5,8 @@ import gulpWebpack from 'gulp-webpack'
 import webpackDevServer from 'webpack-dev-server'
 import webpackDevConfig from './webpack.dev.js'
 import webpackProConfig from './webpack.pro.js'
+import config from './config'
 
-// import fs from 'fs'
-// fs.exists('./config.js', function(exists) {
-//   console.log(exists)
-//   if (exists) {
-    var config = require('./config');
-//   } else {
-//     var config = {}
-//   }
-// });
 // dev server
 gulp.task('dev',()=>{
   var compiler = webpack(webpackDevConfig);
