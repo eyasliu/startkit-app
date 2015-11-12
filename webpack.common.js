@@ -61,9 +61,6 @@ let commonConfig = {
     ),
     // 全局变量
     new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery:'jquery',
-        React:'react',
         cx:'classname',
         config: path.join(__dirname, 'config')
     }),

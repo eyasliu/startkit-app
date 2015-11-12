@@ -1,7 +1,7 @@
 import {Link} from 'react-router'
-import {Component} from 'react'
+import React from 'react'
 
-export default class Navbar extends Component{
+export default class Navbar extends React.Component{
   constructor(){
     super()
   }

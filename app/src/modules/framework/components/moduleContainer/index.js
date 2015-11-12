@@ -1,8 +1,8 @@
-import {Component} from 'react'
+import React from 'react'
 import Navbar from '../navbar'
 
 
-export default class APPModule extends Component{
+export default class APPModule extends React.Component{
   constructor(){
     super()
   }
