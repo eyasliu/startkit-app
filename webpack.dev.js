@@ -10,9 +10,10 @@ module.exports = {
     note: [
       'webpack-dev-server/client?http://'+config.host+':'+config.clientPort,
       'webpack/hot/only-dev-server',
-      './src/app.js'
+      './app/src/entry.js'
     ]
   },
+  debug:true,
   output: {
     path: path.join(__dirname, 'build'),
     filename: '[name].js',
@@ -31,5 +32,5 @@ module.exports = {
   },
   plugins: common.plugins.concat([
     new webpack.HotModuleReplacementPlugin()
-  ]) 
+  ])
 }
