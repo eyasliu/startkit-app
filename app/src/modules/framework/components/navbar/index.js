@@ -1,7 +1,8 @@
 import {Link} from 'react-router'
 import {Component} from 'react'
+import sayHello from '../../decorator/sayHello'
 
-export default class Navbar extends Component{
+class Navbar extends Component{
   constructor(){
     super()
   }
@@ -16,9 +17,9 @@ export default class Navbar extends Component{
         <ul>
         <li><Link to="/example">example</Link></li>
         <li><Link to="/">Home</Link></li>
-
         </ul>
       </div>
     )
   }
 }
+export default sayHello(Navbar)
