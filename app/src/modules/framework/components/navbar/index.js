@@ -1,26 +1,25 @@
-import {Link} from 'react-router'
-import {Component} from 'react'
+import { Link } from 'react-router'
 import demo from 'framework/decorators/demo'
 
-class Navbar extends Component{
-  constructor(){
+class Navbar extends React.Component {
+  constructor() {
     super();
   }
-  static defaultProps={
+
+  static defaultProps = {
     text:'test'
   }
 
-  render(){
+  render() {
     return (
       <div>
-        {this.props.text}
         <ul>
-        <li><Link to="/example">example</Link></li>
-        <li><Link to="/">Home</Link></li>
+          <li><Link to="/example">example</Link></li>
+          <li><Link to="/">Home</Link></li>
         </ul>
         {this.props.chidlren}
       </div>
-    )
+      )
   }
 }
 export default demo(Navbar)
