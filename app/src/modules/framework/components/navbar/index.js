@@ -1,9 +1,10 @@
 import {Link} from 'react-router'
 import {Component} from 'react'
+import demo from 'framework/decorators/demo'
 
-export default class Navbar extends Component{
+class Navbar extends Component{
   constructor(){
-    super()
+    super();
   }
   static defaultProps={
     text:'test'
@@ -22,3 +23,4 @@ export default class Navbar extends Component{
     )
   }
 }
+export default demo(Navbar)
