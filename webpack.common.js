@@ -64,6 +64,7 @@ let commonConfig = {
       $: "jquery",
       jQuery: 'jquery',
       React: 'react',
+      ReactDOM: 'react-dom',
       cx: 'classname',
       config: path.join(__dirname, 'config')
     }),
