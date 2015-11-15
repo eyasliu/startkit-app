@@ -1,3 +1,3 @@
-import AppRouter from './router'
+import AppRouter from './router';
 
-ReactDOM.render(AppRouter, document.getElementById('app'))
+ReactDOM.render(AppRouter, document.getElementById('app'));
