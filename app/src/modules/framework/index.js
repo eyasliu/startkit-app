@@ -1,4 +1,3 @@
-import React from 'react'
 import 'common/style'
 import APPModule from './components/moduleContainer'
 import { Provider } from 'react-redux'
@@ -13,14 +12,10 @@ export default class FrameWork extends React.Component {
   constructor() {
     super()
   }
+
   render() {
     return (
-      <div className="framework">
-        <Provider store={store}>
-          <APPModule children={this.props.children} />
-        </Provider>
-        {config.debug && config.devtool && <Devtool store={store} />}
-      </div>
+      <APPModule children={this.props.children} />
       )
   }
 
