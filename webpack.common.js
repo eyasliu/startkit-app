@@ -67,7 +67,7 @@ const commonConfig = {
       React: 'react',
       ReactDOM: 'react-dom',
       cx: 'classname',
-      config: path.join(__dirname, 'config')
+      config: path.join(__dirname, './config')
     })
   // css 文件单独打包
   // new ExtractTextPlugin('style.css', {
