@@ -1,1 +1,47 @@
 ## 前端应用开始工具
+这是一个种子，前端项目起始于此。搭建好的初始项目架构。
+
+工具基于 webpack + gulp + bower，使用 React 框架开发，暂有两条分支，`react` 分支为react架构，可用于一般项目。`react_redux` 分支集成了 redux 库，可以使用redux数据流。每个分支都有一些demo可供参考。
+
+## 安装
+
+#### 准备
+
+有些库可能需要在线编译，如果您是linux系统，请安装 make、gcc、g++
+```shell
+//centos
+sudo yum install -y make gcc gcc-c++
+
+// ubuntu
+sudo apt-get install -y make gcc g++
+```
+
+如果是Windows系统，请安装 visual studio 2013 版本或以上，并安装 python2.7；
+
+#### 开始安装
+
+建议使用 node 5.0 版本，安装依赖库
+```
+npm i
+```
+如果您正确的安装了准备阶段的工具，那您安装应该很顺利
+
+## 使用
+
+### 开发
+在开发阶段，执行命令
+```
+npm start
+```
+该命令会启动一个支持实时预览的 web 服务器，并且会在每次修改代码后使用 `eslint`执行代码质量检查，让您的代码直线提升质量。
+
+### 打包
+要打包项目，执行命令
+```
+npm run build
+```
+打包后的文件在根目录的 `build` 文件夹，资源文件存放于`resource`目录所有字体文件存放于 `build/resource/font/`目录，所有字体文件存放于`build/resource/img`目录
+
+## 相关资源
+airbnb 编码规范：https://github.com/airbnb/javascript
+redux : https://github.com/rackt/redux
