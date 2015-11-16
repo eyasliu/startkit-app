@@ -39,13 +39,13 @@ const commonConfig = {
         loader: 'style-loader!css-loader!autoprefixer-loader!less-loader'
       }, {
         test: /\.(png|jpg|jpeg|gif)$/,
-        loader: 'url-loader?limit=8192&name=img/[hash].[ext]'
+        loader: 'url-loader?limit=8192&name=resource/img/[hash].[ext]'
       }, {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'url-loader?limit=10000&name=resource/[hash].[ext]&minetype=application/font-woff'
+        loader: 'url-loader?limit=10000&name=resource/font/[hash].[ext]&minetype=application/font-woff'
       }, {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: 'file-loader?name=resource/[hash].[ext]'
+        loader: 'file-loader?name=resource/font/[hash].[ext]'
       }
     ]
   },

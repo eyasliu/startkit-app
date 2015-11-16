@@ -8,9 +8,7 @@ export default class FrameWork extends React.Component {
   }
 
   render() {
-    return (
-      <APPModule children={this.props.children} />
-      );
+    return <APPModule children={this.props.children} />;
   }
 
 }
