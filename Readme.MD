@@ -41,3 +41,7 @@ npm start
 npm run build
 ```
 打包后的文件在根目录的 `build` 文件夹，资源文件存放于`resource`目录所有字体文件存放于 `build/resource/font/`目录，所有字体文件存放于`build/resource/img`目录
+
+## 相关资源
+airbnb 编码规范：https://github.com/airbnb/javascript
+redux : https://github.com/rackt/redux
