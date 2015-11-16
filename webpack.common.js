@@ -1,7 +1,8 @@
-import webpack from 'webpack'
-import path from 'path'
 
-let commonConfig = {
+import webpack from 'webpack';
+import path from 'path';
+
+const commonConfig = {
   resolve: {
     root: path.join(__dirname, 'src/vendor'),
     extensions: ['', '.js', '.jsx', '.css', '.scss'],
@@ -12,8 +13,8 @@ let commonConfig = {
       modules: path.join(__dirname, 'app/src/modules'),
       utils: path.join(__dirname, 'app/src/utils'),
       framework: path.join(__dirname, 'app/src/modules/framework'),
-      example: path.join(__dirname, 'app/src/modules/example'),
-    },
+      example: path.join(__dirname, 'app/src/modules/example')
+    }
   },
   output: {
     path: path.join(__dirname, 'build'),
@@ -24,7 +25,7 @@ let commonConfig = {
     loaders: [
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader?modules&importLoaders=2&localIdentName=[local]!autoprefixer-loader',
+        loader: 'style-loader!css-loader?modules&importLoaders=2&localIdentName=[local]!autoprefixer-loader'
       }, {
         test: /\.(sass|scss)$/,
         loader: 'style-loader!css-loader?modules&importLoaders=2&localIdentName=[local]___[hash:base64:5]!autoprefixer-loader!sass-loader',
@@ -41,10 +42,10 @@ let commonConfig = {
         loader: 'url-loader?limit=8192&name=img/[hash].[ext]'
       }, {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "url-loader?limit=10000&name=resource/[hash].[ext]&minetype=application/font-woff"
+        loader: 'url-loader?limit=10000&name=resource/[hash].[ext]&minetype=application/font-woff'
       }, {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "file-loader?name=resource/[hash].[ext]"
+        loader: 'file-loader?name=resource/[hash].[ext]'
       }
     ]
   },
@@ -52,26 +53,26 @@ let commonConfig = {
     new webpack.NoErrorsPlugin(),
     // 打包公共库
     // new webpack.optimize.CommonsChunkPlugin({
-    //   name: "vendor",
-    //   filename: "vendor.js"
+    //   name: 'vendor',
+    //   filename: 'vendor.js'
     // }),
     // bower 文件
     new webpack.ResolverPlugin(
-      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
     ),
     // 全局变量
     new webpack.ProvidePlugin({
-      $: "jquery",
+      $: 'jquery',
       jQuery: 'jquery',
       React: 'react',
       ReactDOM: 'react-dom',
       cx: 'classname',
       config: path.join(__dirname, 'config')
-    }),
+    })
   // css 文件单独打包
-  // new ExtractTextPlugin("style.css", {
+  // new ExtractTextPlugin('style.css', {
   //     allChunks: true
   // }),
   ]
-}
-export default commonConfig
+};
+export default commonConfig;

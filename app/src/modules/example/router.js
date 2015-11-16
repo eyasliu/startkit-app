@@ -1,10 +1,10 @@
-import React from 'react'
-import Router, { Route, IndexRoute } from 'react-router';
-import Example from './'
+import { Route, IndexRoute } from 'react-router';
+import Example from './';
 
 const APPRouter = (
-    <Route path="/example" component={Example}>
-    </Route>
-)
+<Route path="/example" component={Example}>
+  <IndexRoute component={Example} />
+</Route>
+);
 
-export default APPRouter
+export default APPRouter;

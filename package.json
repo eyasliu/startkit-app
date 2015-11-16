@@ -9,8 +9,12 @@
   "dependencies": {
     "classname": "0.0.0",
     "font-awesome": "^4.4.0",
+    "gulp-eslint": "^1.1.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-plumber": "^1.0.1",
     "history": "^1.13.0",
     "lodash": "^3.10.1",
+    "node-notifier": "^4.3.1",
     "normalize.css": "^3.0.3",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
@@ -36,14 +40,13 @@
       "es2015",
       "stage-0",
       "react"
-
-
     ]
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.1.0",
     "babel": "^6.0.15",
     "babel-core": "^6.1.4",
+    "babel-eslint": "^4.1.5",
     "babel-loader": "^6.1.0",
     "babel-preset-es2015": "^6.1.4",
     "babel-preset-react": "^6.1.4",
@@ -51,6 +54,8 @@
     "bower": "^1.6.5",
     "concurrently": "^0.1.1",
     "css-loader": "^0.22.0",
+    "eslint": "^1.9.0",
+    "eslint-plugin-react": "^3.8.0",
     "file-loader": "^0.8.4",
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.7",

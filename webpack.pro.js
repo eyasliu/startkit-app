@@ -1,30 +1,37 @@
-import webpack from 'webpack'
-import _ from 'lodash'
-import common from './webpack.common'
-import path from 'path'
-import config from './config'
+import webpack from 'webpack';
+// import _ from 'lodash';
+import common from './webpack.common';
+import path from 'path';
+// import config from './config';
 
 module.exports = {
   entry: {
     note: [
-      './src/app.js'
+      './app/src/entry.js'
     ]
   },
-  output: _.assign(common.output,{
-    publicPath: '/assets/',
-  }),
+  output: {
+    ...common.output,
+    publicPath: '/assets/'
+  },
   resolve: common.resolve,
   module: {
-    loaders: common.module.loaders.concat([
+    loaders: [
+      ...common.module.loaders,
       {
         test: /\.(js|jsx)$/,
-        loaders: ['babel-loader?stage=0'],
-        include: path.join(__dirname, 'src'),
-        exclude: [path.join(__dirname,'node_modules'),path.join(__dirname,'src/vendor')]
+        loaders: ['react-hot', 'babel'],
+        include: path.join(__dirname, 'app/src'),
+        exclude: [path.join(__dirname, 'node_modules'), path.join(__dirname, 'app/src/vendor')]
       }
-    ])
+    ]
   },
-  plugins: common.plugins.concat([
-
-  ])
-}
+  plugins: [
+    ...common.plugins,
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
+  ]
+};
