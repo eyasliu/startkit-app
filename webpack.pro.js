@@ -6,7 +6,7 @@ import path from 'path';
 
 module.exports = {
   entry: {
-    note: [
+    app: [
       './app/src/entry.js'
     ]
   },

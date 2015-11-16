@@ -5,8 +5,8 @@ import config from './config';
 
 module.exports = {
   entry: {
-    note: [
-      'webpack-dev-server/client?http://${config.host}:${config.clientPort}',
+    app: [
+      `webpack-dev-server/client?http://${config.host}:${config.clientPort}`,
       'webpack/hot/only-dev-server',
       './app/src/entry.js'
     ]
@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'build'),
     filename: '[name].js',
-    publicPath: 'http://${config.host}:${config.clientPort}/build/'
+    publicPath: `http://${config.host}:${config.clientPort}/build/`
   },
   resolve: common.resolve,
   module: {
