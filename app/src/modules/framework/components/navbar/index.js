@@ -1,5 +1,5 @@
-import { Link } from 'react-router'
-import demo from 'framework/decorators/demo'
+import { Link } from 'react-router';
+import demo from 'framework/decorators/demo';
 
 class Navbar extends React.Component {
   constructor() {
@@ -7,7 +7,7 @@ class Navbar extends React.Component {
   }
 
   static defaultProps = {
-    text:'test'
+    text: 'test'
   }
 
   render() {
@@ -19,7 +19,7 @@ class Navbar extends React.Component {
         </ul>
         {this.props.chidlren}
       </div>
-      )
+      );
   }
 }
-export default demo(Navbar)
+export default demo(Navbar);

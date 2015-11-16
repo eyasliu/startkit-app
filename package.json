@@ -9,8 +9,12 @@
   "dependencies": {
     "classname": "0.0.0",
     "font-awesome": "^4.4.0",
+    "gulp-eslint": "^1.1.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-plumber": "^1.0.1",
     "history": "^1.13.0",
     "lodash": "^3.10.1",
+    "node-notifier": "^4.3.1",
     "normalize.css": "^3.0.3",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",

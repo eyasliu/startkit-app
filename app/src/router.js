@@ -1,17 +1,20 @@
 // 应用总路由
+import React from 'react';
 import Router, { Route, IndexRoute } from 'react-router';
-import createHistory  from 'history/lib/createHashHistory'
+import createHistory  from 'history/lib/createHashHistory';
 
-import Framework from 'framework'
+import Framework from 'framework';
 
-import ExampleRouter from 'example/router'
+import ExampleRouter from 'example/router';
+import Index from 'example';
 
 const APPRouter = (
   <Router history={createHistory()}>
     <Route path="/" component={Framework}>
       {ExampleRouter}
+      <IndexRoute component={Index} />
     </Route>
   </Router>
-)
+);
 
-export default APPRouter
+export default APPRouter;

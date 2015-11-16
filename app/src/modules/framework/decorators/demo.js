@@ -1,7 +1,7 @@
-export default ComposedComponent => class extends React.Component{
+export default ComposedComponent => class extends React.Component {
   constructor() {
     super();
-    this
+    this;
   }
   componentDidMount() {
     console.log('hello,this is demo decorator');
@@ -10,5 +10,3 @@ export default ComposedComponent => class extends React.Component{
     return <ComposedComponent {...this.props} />;
   }
 };
-
-// export default demo

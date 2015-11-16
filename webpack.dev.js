@@ -1,5 +1,4 @@
 import webpack from 'webpack';
-import _ from 'lodash';
 import common from './webpack.common';
 import path from 'path';
 import config from './config';
@@ -7,7 +6,7 @@ import config from './config';
 module.exports = {
   entry: {
     note: [
-      'webpack-dev-server/client?http://'+config.host+':'+config.clientPort,
+      'webpack-dev-server/client?http://${config.host}:${config.clientPort}',
       'webpack/hot/only-dev-server',
       './app/src/entry.js'
     ]
@@ -15,7 +14,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'build'),
     filename: '[name].js',
-    publicPath: 'http://'+config.host+':'+config.clientPort+'/build/'
+    publicPath: 'http://${config.host}:${config.clientPort}/build/'
   },
   resolve: common.resolve,
   module: {
@@ -23,15 +22,15 @@ module.exports = {
       ...common.module.loaders,
       {
         test: /\.(js|jsx)$/,
-        loaders: ['react-hot','babel'],
+        loaders: ['react-hot', 'babel'],
         include: path.join(__dirname, 'app/src'),
-        exclude: [path.join(__dirname,'node_modules'),path.join(__dirname,'app/src/vendor')]
+        exclude: [path.join(__dirname, 'node_modules'), path.join(__dirname, 'app/src/vendor')]
       }
     ]
   },
-  devtool:"source-map",
+  devtool: 'source-map',
   plugins: [
     ...common.plugins,
     new webpack.HotModuleReplacementPlugin()
   ]
-}
+};
