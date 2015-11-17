@@ -14,7 +14,7 @@ class Navbar extends React.Component {
     return (
       <div>
         <ul>
-          <li><Link to="/example">example 1</Link></li>
+          <li><Link to="/example">example</Link></li>
           <li><Link to="/">Home</Link></li>
         </ul>
         {this.props.chidlren}
