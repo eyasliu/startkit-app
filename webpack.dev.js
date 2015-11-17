@@ -22,7 +22,7 @@ module.exports = {
       ...common.module.loaders,
       {
         test: /\.(js|jsx)$/,
-        loaders: ['react-hot', 'babel'],
+        loaders: ['react-hot', 'babel?cacheDirectory=true'],
         include: [path.join(__dirname, 'app/src'), path.join(__dirname, './config')],
         exclude: [path.join(__dirname, 'node_modules'), path.join(__dirname, 'app/src/vendor')]
       }
