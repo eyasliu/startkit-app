@@ -9,10 +9,14 @@ import gulpWebpack from 'gulp-webpack';
 import notifier from 'node-notifier';
 import path from 'path';
 import run from 'run-sequence';
+import colors from 'colors';
 import WebpackDevServer from 'webpack-dev-server';
 import webpackDevConfig from './webpack.dev.js';
 import webpackProConfig from './webpack.pro.js';
 import config from './config';
+
+// dev core
+import fs from 'fs';
 
 const $ = require('gulp-load-plugins')();
 
@@ -21,10 +25,12 @@ gulp.task('dev', ()=>{
   const compiler = webpack(webpackDevConfig);
 
   compiler.plugin('done', (stats) => {
+    const statsStr = stats.toString();
+    console.log(statsStr.substr(0, statsStr.indexOf('[rendered]')).green);
     run('lint');
   });
   compiler.plugin('failed', (err) => {
-    console.log(err);
+    console.log(err.red);
   });
 
   new WebpackDevServer( compiler, {
@@ -33,12 +39,12 @@ gulp.task('dev', ()=>{
     hot: true,
     quiet: true,
     historyApiFallback: true,
-    noInfo: true,
+    noInfo: false,
     inline: true,
     stats: {
       colors: true
     }
-  }).listen(config.clientPort, config.host, (err)=>{
+  }).listen(config.clientPort, config.host, (err, stats)=>{
     if (err) util.log(err);
     util.log(`webpack was listenning: http://${config.host}:${config.clientPort}`);
   });
