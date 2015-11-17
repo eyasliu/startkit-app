@@ -3,5 +3,6 @@ module.exports = {
   clientPort: 3000,
   server: 'http://localhost:3000',
   debug: true,
-  devtool: true
+  devtool: true,
+  defaultDevtoolOpen: false
 };
