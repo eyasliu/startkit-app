@@ -5,7 +5,7 @@ import thunk from 'redux-thunk';
 import { devTools, persistState } from 'redux-devtools';
 export let defaultMiddlewares = [applyMiddleware(thunk)];
 
-if ( config.debug && config.devtool ) {
+if (config.debug && config.devtool) {
   defaultMiddlewares = defaultMiddlewares.concat([
     devTools(),
     persistState(window.location.href.match(/[?&]debug_session=([^&]+)\b/))
