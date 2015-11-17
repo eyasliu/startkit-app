@@ -40,8 +40,12 @@ npm start
 ```
 npm run build
 ```
-打包后的文件在根目录的 `build` 文件夹，资源文件存放于`resource`目录所有字体文件存放于 `build/resource/font/`目录，所有字体文件存放于`build/resource/img`目录
+打包后的文件在根目录的 `build` 文件夹，资源文件存放于`resource`目录，所有字体文件存放于 `build/resource/font/`目录，所有图片文件存放于`build/resource/img`目录
+
+## 关于bower
+bower 是一个可选的工具，是一个不怎么推荐使用的，安装一个包时，尽量选择使用 npm 安装，如果npm 源实在没有，再使用 bower 安装，bower安装的包会存放在 `app/src/vendor`目录
 
 ## 相关资源
-airbnb 编码规范：https://github.com/airbnb/javascript
-redux : https://github.com/rackt/redux
+
+* airbnb 编码规范：https://github.com/airbnb/javascript
+* redux : https://github.com/rackt/redux
