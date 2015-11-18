@@ -1,26 +1,25 @@
-import {Link} from 'react-router'
-import {Component} from 'react'
-import sayHello from '../../decorator/sayHello'
+import { Link } from 'react-router';
+import demo from 'framework/decorators/demo';
 
-class Navbar extends Component{
-  constructor(){
-    super()
-  }
-  static defaultProps={
-    text:'test'
+class Navbar extends React.Component {
+  constructor() {
+    super();
   }
 
-  render(){
+  static defaultProps = {
+    text: 'test'
+  }
+
+  render() {
     return (
       <div>
-        {this.props.text}
         <ul>
-        <li><Link to="/example">example</Link></li>
-        <li><Link to="/">Home</Link></li>
+          <li><Link to="/example">example</Link></li>
+          <li><Link to="/">Home</Link></li>
         </ul>
         {this.props.chidlren}
       </div>
-    )
+    );
   }
 }
-export default sayHello(Navbar)
+export default demo(Navbar);
