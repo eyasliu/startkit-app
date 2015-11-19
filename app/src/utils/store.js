@@ -1,13 +1,14 @@
-import {Component} from 'react';
-import {createStore, applyMiddleware, compose} from 'redux';
-//import all your middleware here
+import { createStore, applyMiddleware, compose } from 'redux';
+import { persistState } from 'redux-devtools';
 import thunk from 'redux-thunk';
-import { devTools, persistState } from 'redux-devtools';
+import Devtools from './DevTools';
+
+
 export let defaultMiddlewares = [applyMiddleware(thunk)];
 
 if (config.debug && config.devtool) {
   defaultMiddlewares = defaultMiddlewares.concat([
-    devTools(),
+    Devtools.instrument(),
     persistState(window.location.href.match(/[?&]debug_session=([^&]+)\b/))
   ]);
 }
