@@ -4,5 +4,5 @@ module.exports = {
   server: 'http://localhost:3000',
   debug: true,
   devtool: true,
-  defaultDevtoolOpen: false
+  defaultDevtoolOpen: true
 };
