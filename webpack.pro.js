@@ -1,8 +1,6 @@
 import webpack from 'webpack';
-// import _ from 'lodash';
 import common from './webpack.common';
 import path from 'path';
-// import config from './config';
 
 module.exports = {
   entry: {
@@ -12,7 +10,7 @@ module.exports = {
   },
   output: {
     ...common.output,
-    publicPath: '/assets/'
+    publicPath: '/build/'
   },
   resolve: common.resolve,
   module: {
