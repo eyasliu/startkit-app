@@ -1,9 +1,9 @@
 module.exports = {
-  host: '127.0.0.1',
-  clientPort: 3000,
-  server: 'http://eyasliu.eyasweb.com',
-  debug: true,
-  devtool: true,
-  defaultDevtoolOpen: true,
+  host: '127.0.0.1',                  // 前端开发主机
+  clientPort: 3000,                   // 前端开发端口号
+  server: 'http://localhost:3001',    // api 接口
+  debug: true,                // 调试模式
+  devtool: true,              //是否需要使用redux 开发者工具
+  defaultDevtoolOpen: true,   // 是否默认打开redux开发工具
   defaultDevtoolPosition: 'right'  //['left', 'top', 'right', 'bottom']
 };
