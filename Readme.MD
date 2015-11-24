@@ -38,6 +38,9 @@ npm i
 ```
 如果您正确的安装了准备阶段的工具，那您安装应该很顺利
 
+#### 配置文件
+当安装好了之后，请将 local.js.example 命令为 local.js ，这是项目的配置文件，用于在不同的环境中使用不同配置。
+
 ## 使用
 
 ### 开发
@@ -54,17 +57,22 @@ npm run build
 ```
 打包后的文件在根目录的 `build` 文件夹，资源文件存放于`resource`目录，所有字体文件存放于 `build/resource/font/`目录，所有图片文件存放于`build/resource/img`目录
 
+## 模拟接口 mock server
+开发中需要用到模拟数据，mock可以模拟 api 接口并返回 随机产生的模拟数据
+
+#### 启动
+当执行 `npm run dev`时，会将mock server同时启动，mockserver监听3001端口。
+如果希望单独启动，执行：
+```
+npm run mock
+```
+
 ## 关于bower
 bower 是一个可选的工具，是一个不怎么推荐使用的，安装一个包时，尽量选择使用 npm 安装，如果npm 源实在没有，再使用 bower 安装，bower安装的包会存放在 `app/src/vendor`目录
 
 ## 关于 redux
 redux 是一个管理状态的库，非常符合react的工作方式，所以 redux + react的工作方式是能很方便的处理那些复杂的业务逻辑；可在 `react_redux`分支去初始化。
 
-#### redux 开发者工具
-redux 开发者工具默认显示，可以使用快捷键操作
-
-* ctrl + H 切换显示隐藏
-* ctrl + Q 更换方向
 
 
 #### 启用开发者工具

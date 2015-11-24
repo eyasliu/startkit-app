@@ -1,4 +1,3 @@
-
 import webpack from 'webpack';
 import path from 'path';
 
@@ -29,11 +28,11 @@ const commonConfig = {
       }, {
         test: /\.(sass|scss)$/,
         loader: 'style-loader!css-loader?modules&importLoaders=2&localIdentName=[local]___[hash:base64:5]!autoprefixer-loader!sass-loader',
-        exclude: [path.join(__dirname, 'src/common/style')]
+        exclude: [path.join(__dirname, 'app/src/common/style')]
       }, {
         test: /\.(sass|scss)$/,
         loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader',
-        include: [path.join(__dirname, 'src/common/style')]
+        include: [path.join(__dirname, 'app/src/common/style')]
       }, {
         test: /\.less$/,
         loader: 'style-loader!css-loader!autoprefixer-loader!less-loader'
