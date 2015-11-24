@@ -18,6 +18,18 @@ sudo apt-get install -y make gcc g++
 
 如果是Windows系统，请安装 visual studio 2013 版本或以上，并安装 python2.7；
 
+#### 工具
+需要一些全局工具
+
+* gulp ，构建工具
+* concurrently 并行运行多条任务
+
+所以，需要全局安装两个库
+
+```
+npm i -g gulp concurrently
+```
+
 #### 开始安装
 
 建议使用 node 5.0 版本，安装依赖库
@@ -25,6 +37,9 @@ sudo apt-get install -y make gcc g++
 npm i
 ```
 如果您正确的安装了准备阶段的工具，那您安装应该很顺利
+
+#### 配置文件
+当安装好了之后，请将 local.js.example 命令为 local.js ，这是项目的配置文件，用于在不同的环境中使用不同配置。
 
 ## 使用
 
@@ -44,6 +59,14 @@ npm run build
 
 ## 关于bower
 bower 是一个可选的工具，是一个不怎么推荐使用的，安装一个包时，尽量选择使用 npm 安装，如果npm 源实在没有，再使用 bower 安装，bower安装的包会存放在 `app/src/vendor`目录
+
+## 关于 redux
+redux 是一个管理状态的库，非常符合react的工作方式，所以 redux + react的工作方式是能很方便的处理那些复杂的业务逻辑；可在 `react_redux`分支去初始化。
+
+
+
+#### 启用开发者工具
+
 
 ## 相关资源
 
