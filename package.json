@@ -9,6 +9,8 @@
     "redux"
   ],
   "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.3.13",
+    "babel-plugin-transform-decorators-legacy": "^1.2.0",
     "classname": "0.0.0",
     "font-awesome": "^4.4.0",
     "history": "^1.13.0",
@@ -38,6 +40,10 @@
       "es2015",
       "stage-0",
       "react"
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-decorators-legacy"
     ]
   },
   "devDependencies": {

@@ -3,11 +3,14 @@ import APPModule from './components/moduleContainer';
 import { Provider } from 'react-redux';
 import createStore from 'utils/store';
 import reducers from './reducers';
-import Devtool from 'utils/DevTools';
+import devtool from './decorators/devtool';
+
 
 const store = createStore()(reducers);
-console.log(config);
-export default class FrameWork extends React.Component {
+
+@devtool
+export default
+class FrameWork extends React.Component {
   constructor() {
     super();
   }
@@ -16,13 +19,11 @@ export default class FrameWork extends React.Component {
     return (
       <div>
         <Provider store={store}>
-        <div>
-          <APPModule children={this.props.children} />
-          { config.debug && config.devtool && <Devtool store={store} /> }
-        </div>
+          <APPModule>
+            {this.props.children}
+          </APPModule>
         </Provider>
       </div>
     );
   }
-
 }
