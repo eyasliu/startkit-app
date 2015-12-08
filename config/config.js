@@ -6,7 +6,7 @@ module.exports = {
   server: 'http://localhost:3001',
   debug: true,
   devtool: true,
-  defaultDevtoolOpen: false,
+  defaultDevtoolOpen: true,
   defaultDevtoolPosition: 'right',  //['left', 'top', 'right', 'bottom']
   ...local
 };

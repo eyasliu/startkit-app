@@ -4,7 +4,7 @@ import path from 'path';
 import config from './config';
 
 module.exports = {
-  context: path.join(__dirname,'../'),
+  
   entry: {
     app: [
       `webpack-dev-server/client?http://${config.host}:${config.clientPort}`,
