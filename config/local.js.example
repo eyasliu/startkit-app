@@ -5,5 +5,5 @@ module.exports = {
   debug: true,
   devtool: true,
   defaultDevtoolOpen: false,
-  defaultDevtoolPosition: 'right',  //['left', 'top', 'right', 'bottom']
+  defaultDevtoolPosition: 'right'  //['left', 'top', 'right', 'bottom']
 };
