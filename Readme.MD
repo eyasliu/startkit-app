@@ -18,6 +18,18 @@ sudo apt-get install -y make gcc g++
 
 如果是Windows系统，请安装 visual studio 2013 版本或以上，并安装 python2.7；
 
+#### 工具
+需要一些全局工具
+
+* gulp ，构建工具
+* concurrently 并行运行多条任务
+
+所以，需要全局安装两个库
+
+```
+npm i -g gulp concurrently
+```
+
 #### 开始安装
 
 建议使用 node 5.0 版本，安装依赖库
@@ -44,6 +56,19 @@ npm run build
 
 ## 关于bower
 bower 是一个可选的工具，是一个不怎么推荐使用的，安装一个包时，尽量选择使用 npm 安装，如果npm 源实在没有，再使用 bower 安装，bower安装的包会存放在 `app/src/vendor`目录
+
+## 关于 redux
+redux 是一个管理状态的库，非常符合react的工作方式，所以 redux + react的工作方式是能很方便的处理那些复杂的业务逻辑；可在 `react_redux`分支去初始化。
+
+#### redux 开发者工具
+redux 开发者工具默认显示，可以使用快捷键操作
+
+* ctrl + H 切换显示隐藏
+* ctrl + Q 更换方向
+
+
+#### 启用开发者工具
+
 
 ## 相关资源
 
