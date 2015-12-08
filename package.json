@@ -4,7 +4,9 @@
   "description": "is a startkit with react app",
   "keywords": [
     "startkit",
-    "app"
+    "app",
+    "react",
+    "redux"
   ],
   "dependencies": {
     "classname": "0.0.0",
