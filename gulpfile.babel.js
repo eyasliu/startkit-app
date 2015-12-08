@@ -11,12 +11,9 @@ import path from 'path';
 import run from 'run-sequence';
 import colors from 'colors';
 import WebpackDevServer from 'webpack-dev-server';
-import webpackDevConfig from './webpack.dev.js';
-import webpackProConfig from './webpack.pro.js';
-import config from './config';
-
-// dev core
-import fs from 'fs';
+import webpackDevConfig from './config/webpack.dev.js';
+import webpackProConfig from './config/webpack.pro.js';
+import config from './config/config';
 
 const $ = require('gulp-load-plugins')();
 
