@@ -1,7 +1,8 @@
 import { Link } from 'react-router';
 import demo from 'framework/decorators/demo';
 
-class Navbar extends React.Component {
+@demo
+export default class Navbar extends React.Component {
   constructor() {
     super();
   }
@@ -22,4 +23,4 @@ class Navbar extends React.Component {
     );
   }
 }
-export default demo(Navbar);
+

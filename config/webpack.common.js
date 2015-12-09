@@ -3,20 +3,20 @@ import path from 'path';
 
 const commonConfig = {
   resolve: {
-    root: path.join(__dirname, 'src/vendor'),
+    root: path.join(__dirname, 'bower_components'),
     extensions: ['', '.js', '.jsx', '.css', '.scss'],
     alias: {
-      src: path.join(__dirname, 'app/src'),
-      vendor: path.join(__dirname, 'app/src/vendor'),
-      common: path.join(__dirname, 'app/src/common'),
-      modules: path.join(__dirname, 'app/src/modules'),
-      utils: path.join(__dirname, 'app/src/utils'),
-      framework: path.join(__dirname, 'app/src/modules/framework'),
-      example: path.join(__dirname, 'app/src/modules/example')
+      client: path.join(__dirname, '../app/client'),
+      vendor: path.join(__dirname, '../app/client/vendor'),
+      common: path.join(__dirname, '../app/client/common'),
+      modules: path.join(__dirname, '../app/client/modules'),
+      utils: path.join(__dirname, '../app/client/utils'),
+      framework: path.join(__dirname, '../app/client/modules/framework'),
+      example: path.join(__dirname, '../app/client/modules/example')
     }
   },
   output: {
-    path: path.join(__dirname, 'build'),
+    path: path.join(__dirname, '../build'),
     filename: '[name].js',
     publicPath: '/build/'
   },
@@ -28,11 +28,11 @@ const commonConfig = {
       }, {
         test: /\.(sass|scss)$/,
         loader: 'style-loader!css-loader?modules&importLoaders=2&localIdentName=[local]___[hash:base64:5]!autoprefixer-loader!sass-loader',
-        exclude: [path.join(__dirname, 'app/src/common/style')]
+        exclude: [path.join(__dirname, '../app/client/common/style')]
       }, {
         test: /\.(sass|scss)$/,
         loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader',
-        include: [path.join(__dirname, 'app/src/common/style')]
+        include: [path.join(__dirname, '../app/client/common/style')]
       }, {
         test: /\.less$/,
         loader: 'style-loader!css-loader!autoprefixer-loader!less-loader'

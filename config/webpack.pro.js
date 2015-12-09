@@ -5,7 +5,7 @@ import path from 'path';
 module.exports = {
   entry: {
     app: [
-      './app/src/entry.js'
+      './app/client/entry.js'
     ]
   },
   output: {
@@ -19,8 +19,8 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         loaders: ['react-hot', 'babel'],
-        include: [path.join(__dirname, 'app/src'), path.join(__dirname, './config')],
-        exclude: [path.join(__dirname, 'node_modules'), path.join(__dirname, 'app/src/vendor')]
+        include: [path.join(__dirname, '../app/client'), path.join(__dirname, './config')],
+        exclude: [path.join(__dirname, '../node_modules'), path.join(__dirname, '../app/client/vendor')]
       }
     ]
   },
