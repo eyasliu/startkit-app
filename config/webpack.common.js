@@ -3,12 +3,13 @@ import path from 'path';
 
 const commonConfig = {
   resolve: {
-    root: path.join(__dirname, 'bower_components'),
+    // root: path.join(__dirname, 'bower_components'),
     extensions: ['', '.js', '.jsx', '.css', '.scss'],
     alias: {
       client: path.join(__dirname, '../app/client'),
       vendor: path.join(__dirname, '../app/client/vendor'),
       common: path.join(__dirname, '../app/client/common'),
+      cc: path.join(__dirname, '../app/client/common/components'),
       modules: path.join(__dirname, '../app/client/modules'),
       utils: path.join(__dirname, '../app/client/utils'),
       framework: path.join(__dirname, '../app/client/modules/framework'),
@@ -21,6 +22,7 @@ const commonConfig = {
     publicPath: '/build/'
   },
   module: {
+    noParse: [],
     loaders: [
       {
         test: /\.css$/,
@@ -56,9 +58,9 @@ const commonConfig = {
     //   filename: 'vendor.js'
     // }),
     // bower 文件
-    new webpack.ResolverPlugin(
-      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
-    ),
+    // new webpack.ResolverPlugin(
+    //   new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
+    // ),
     // 全局变量
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -67,6 +69,10 @@ const commonConfig = {
       ReactDOM: 'react-dom',
       cx: 'classname',
       config: path.join(__dirname, './config')
+    }),
+    new webpack.DefinePlugin({
+      VERSION: '0.0.0'
+
     })
   // css 文件单独打包
   // new ExtractTextPlugin('style.css', {
