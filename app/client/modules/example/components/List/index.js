@@ -26,7 +26,7 @@ export default class List_ extends Component{
       }else if(type == 'completed'){
         return !item.isActive;
       }
-    })
+    });
     return (
       <List>
         {list.map(item => (
@@ -36,6 +36,6 @@ export default class List_ extends Component{
           />)
         )}
       </List>
-    )
+    );
   }
 }

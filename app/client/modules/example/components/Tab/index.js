@@ -13,7 +13,7 @@ export default class Tab_ extends Component {
 
   addTodo(e){
     this.props.addTodo(e.target.value);
-    e.target.value = ''
+    e.target.value = '';
   }
 
   render(){
@@ -28,7 +28,7 @@ export default class Tab_ extends Component {
         <Paper>
           <Tabs>
             <Tab label="All">
-              <List data={data} type="all"></List>
+              <List data={data} type="all" />
               <span style={{padding: "0 1em"}}>
                 <TextField hintText="add a task" 
                 style={{width: '98%'}}
@@ -37,10 +37,10 @@ export default class Tab_ extends Component {
               </span>
             </Tab>
             <Tab label="Active">
-              <List data={data} type="active"></List>
+              <List data={data} type="active" />
             </Tab>
             <Tab label="Completed">
-              <List data={data} type="completed"></List>
+              <List data={data} type="completed" />
             </Tab>
           </Tabs>
         </Paper>

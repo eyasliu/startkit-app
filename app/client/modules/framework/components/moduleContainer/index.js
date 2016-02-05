@@ -12,7 +12,7 @@ export default class APPModule extends React.Component {
     return (
       <div>
         <Navbar text="StartKit App" />
-        {this.props.children && <Example></Example>}
+        {this.props.children && <Example />}
       </div>
       );
   }
