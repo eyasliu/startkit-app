@@ -1,4 +1,4 @@
-import {combineReducers,bindActionCreators,compose} from 'redux';
+import {combineReducers, bindActionCreators, compose} from 'redux';
 import {connect} from 'react-redux';
 import request from './request';
 

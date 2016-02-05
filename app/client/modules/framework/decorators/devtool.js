@@ -10,6 +10,6 @@ export default Component => class extends React.Component {
       <Component>
         {config.debug && config.devtool && <Devtool />}
       </Component>
-    )
+    );
   }
-}
+};
