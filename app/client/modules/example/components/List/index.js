@@ -28,14 +28,17 @@ export default class List_ extends Component{
       }
     });
     return (
-      <List>
-        {list.map(item => (
-          <ListItem 
-            leftCheckbox={<Checkbox checked={item.isActive} onCheck={e => this.props.toggleActive(item.id)} />}
-            primaryText={item.title} 
-          />)
-        )}
-      </List>
+      <div>
+        <List>
+          {list.map(item => (
+            <ListItem 
+              key={item.id}
+              leftCheckbox={<Checkbox checked={item.isActive} onCheck={e => this.props.toggleActive(item.id)} />}
+              primaryText={item.title} 
+            />)
+          )}
+        </List>
+      </div>
     );
   }
 }

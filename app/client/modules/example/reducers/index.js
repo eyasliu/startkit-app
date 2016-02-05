@@ -20,11 +20,13 @@ const initState = {
     }
   ]
 };
+let newID = 5;
 
 export default function example(state = initState, action) {
   switch(action.type){
     case 'ADDTODO':
       const newTodo = {
+        id: newID++,
         title: action.title,
         isActive: false
       };
