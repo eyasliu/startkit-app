@@ -1,5 +1,8 @@
 import Navbar from '../navbar';
 
+// example 
+import Example from 'example';
+
 export default class APPModule extends React.Component {
   constructor() {
     super();
@@ -8,8 +11,8 @@ export default class APPModule extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
-        {this.props.children}
+        <Navbar text="StartKit App" />
+        {this.props.children && <Example></Example>}
       </div>
       );
   }

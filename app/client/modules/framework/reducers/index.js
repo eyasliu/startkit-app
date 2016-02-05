@@ -1,9 +1,8 @@
-import {compose, combineReducers} from 'redux';
-import demo from './demo';
-
+// example module
+import example from 'example/reducers';
 
 const reducers = combineReducers({
-  demo
+  example
 });
 
 export default reducers;

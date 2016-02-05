@@ -1,11 +1,12 @@
 // 应用总路由
 import Router, { Route, IndexRoute } from 'react-router';
 import createHistory  from 'history/lib/createHashHistory';
-
 import Framework from 'framework';
 
+// example module
 import ExampleRouter from 'example/router';
 import Index from 'example';
+
 
 const APPRouter = (
   <Router history={createHistory()}>

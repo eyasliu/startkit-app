@@ -1,3 +1,4 @@
+import APPModule from './components/APPModule';
 
 export default class Example extends React.Component {
   constructor() {
@@ -7,7 +8,9 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
-        这是example模块
+        <APPModule>
+          {this.props.children}
+        </APPModule>
       </div>
     );
   }
