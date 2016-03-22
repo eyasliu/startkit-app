@@ -15,14 +15,14 @@ gulp.task('dev', ()=>{
   const compiler = webpack(webpackDevConfig);
 
   compiler.plugin('done', (stats) => {
-    run('lint');
+    // run('lint');
   });
 
   new WebpackDevServer( compiler, {
     contentBase: './',
     publicPath: webpackDevConfig.output.publicPath,
     hot: true,
-    quiet: true,
+    quiet: false,
     historyApiFallback: true,
     noInfo: false,
     inline: true,

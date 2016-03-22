@@ -14,24 +14,13 @@
     "mock": "babel-node mock",
     "dev": "concurrent -k -r \"gulp dev\" \"babel-node mock\" "
   },
-  "main": "app/build/app.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git@git.oschina.net:yuesong/startkit-app.git"
   },
   "author": "eyas",
   "license": "BSD-3-Clause",
-  "babel": {
-    "presets": [
-      "es2015",
-      "stage-0",
-      "react"
-    ],
-    "plugins": [
-      "transform-class-properties",
-      "transform-decorators-legacy"
-    ]
-  },
   "dependencies": {
     "classname": "0.0.0",
     "font-awesome": "^4.4.0",
@@ -67,6 +56,9 @@
     "less": "^2.5.3",
     "less-loader": "^2.2.1",
     "node-sass": "^3.4.1",
+    "react-transform-catch-errors": "^1.0.2",
+    "react-transform-hmr": "^1.0.2",
+    "redbox-react": "^1.2.2",
     "run-sequence": "^1.1.4",
     "sass-loader": "^3.1.1",
     "style-loader": "^0.13.0",
