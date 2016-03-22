@@ -15,7 +15,7 @@ gulp.task('dev', ()=>{
   const compiler = webpack(webpackDevConfig);
 
   compiler.plugin('done', (stats) => {
-    // run('lint');
+    run('lint');
   });
 
   new WebpackDevServer( compiler, {
@@ -48,7 +48,6 @@ gulp.task('lint', () => {
         'config': true
       }
     }))
-    .pipe(eslint.failOnError())
     .pipe(eslint.formatEach());
 });
 
@@ -58,8 +57,8 @@ gulp.task('build', ['clean'], ()=>{
     console.log(stats.toString({
       chunks: false,
       colors: true
-    }))
-  })
+    }));
+  });
 });
 
 // build on save
