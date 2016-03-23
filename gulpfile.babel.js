@@ -38,16 +38,7 @@ gulp.task('dev', ()=>{
 
 gulp.task('lint', () => {
   return gulp.src(['./*.js', 'app/src/**/*.js', 'app/src/**/*.jsx', '!app/src/vendor/**/*'])
-    .pipe(eslint({
-      globals: {
-        'React': true,
-        '$': true,
-        'jQuery': true,
-        'ReactDOM': true,
-        'cx': true,
-        'config': true
-      }
-    }))
+    .pipe(eslint())
     .pipe(eslint.formatEach());
 });
 
