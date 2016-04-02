@@ -16,9 +16,9 @@ const commonConfig = {
     }
   },
   output: {
-    path: path.join(__dirname, 'build'),
+    path: path.join(__dirname, '../build/client'),
     filename: '[name].js',
-    publicPath: '/build/'
+    publicPath: '/assets/'
   },
   module: {
     loaders: [

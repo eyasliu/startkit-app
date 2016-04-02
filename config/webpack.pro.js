@@ -4,13 +4,12 @@ import path from 'path';
 
 module.exports = {
   entry: {
-    app: [
+    client: [
       './app/client/entry.js'
     ]
   },
   output: {
-    ...common.output,
-    publicPath: '/build/'
+    ...common.output
   },
   resolve: common.resolve,
   module: {

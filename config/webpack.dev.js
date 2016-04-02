@@ -6,16 +6,15 @@ import config from './config';
 module.exports = {
   
   entry: {
-    app: [
+    client: [
       `webpack-dev-server/client?http://${config.host}:${config.clientPort}`,
       'webpack/hot/only-dev-server',
       './app/client/entry.js'
     ]
   },
   output: {
-    path: path.join(__dirname, '../build'),
+    path: path.join(__dirname, '../public/assets'),
     filename: '[name].js',
-    publicPath: `http://${config.host}:${config.clientPort}/build/`
   },
   resolve: common.resolve,
   module: {
@@ -23,7 +22,7 @@ module.exports = {
       ...common.module.loaders,
       {
         test: /\.(js|jsx)$/,
-        loaders: ['react-hot', 'babel?cacheDirectory=true'],
+        loaders: ['babel'],
         include: [path.join(__dirname, '../app/client'), path.join(__dirname, 'config')],
         exclude: [path.join(__dirname, '../node_modules'), path.join(__dirname, '../app/client/vendor')]
       }
