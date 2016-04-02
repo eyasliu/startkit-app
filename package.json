@@ -9,20 +9,25 @@
     "redux"
   ],
   "scripts": {
-    "start": "gulp dev",
-    "build": "gulp build",
-    "mock": "babel-node mock",
-    "dev": "concurrent -k -r \"gulp dev\" \"babel-node mock\" "
+    "lint": "gulp lint",
+    "clean": "gulp clean",
+    "start": "cross-env NODE_ENV=development gulp dev",
+    "build": "cross-env NODE_ENV=production gulp build",
+    "dev": "gulp dev",
+    "test": "cross-env NODE_ENV=test karma start",
+    "test:watch": "cross-env NODE_ENV=test npm test -- --watch --no-single-run",
+    "postinstall": "npm run build"
   },
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git@git.oschina.net:yuesong/startkit-app.git"
   },
-  "author": "eyas",
+  "author": "Eyas",
   "license": "BSD-3-Clause",
   "dependencies": {
     "classname": "0.0.0",
+    "cross-env": "^1.0.7",
     "font-awesome": "^4.4.0",
     "history": "^1.17.0",
     "lodash": "^3.10.1",
