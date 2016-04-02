@@ -7,7 +7,7 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
-        这是example模块
+        this id example
       </div>
     );
   }
