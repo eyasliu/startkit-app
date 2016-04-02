@@ -33,12 +33,11 @@ gulp.task('server', ['server-watch'], () => {
 gulp.task('server-watch', () => {
   webpack(webpackServerConfig).watch(100, (err, stats) => {
     console.log(stats.toString({
-        chunks: false,
-        colors: true,
-      })
-    );
+      chunks: false,
+      colors: true,
+    }));
     run('lint');
-    if(!err) nodemon.restart();
+    !err && nodemon.restart();
   })
 })
 
@@ -70,15 +69,16 @@ gulp.task('client', ()=>{
 
 gulp.task('lint', () => {
   return gulp.src([
-      './*.js', 
-      'app/**/*.js', 
-      'app/**/*.jsx', 
-      '!app/vendor/**/*',
-      '!app/client/node_modules/**/*',
-      '!app/server/node_modules/**/*'
-    ])
-    .pipe(eslint())
-    .pipe(eslint.formatEach());
+    './*.js', 
+    'app/**/*.js', 
+    'app/**/*.jsx', 
+    '!app/vendor/**/*',
+    '!karma.conf.js',
+    '!app/client/node_modules/**/*',
+    '!app/server/node_modules/**/*'
+  ])
+  .pipe(eslint())
+  .pipe(eslint.formatEach());
 });
 
 // build
@@ -101,7 +101,6 @@ gulp.task('build', ['clean'], ()=>{
       colors: true
     }));
   });
-
 });
 
 // build on save
