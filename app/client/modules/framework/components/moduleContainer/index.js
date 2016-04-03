@@ -1,4 +1,5 @@
 import Navbar from '../navbar';
+import Test from './test';
 
 export default class APPModule extends React.Component {
   constructor() {
@@ -8,7 +9,7 @@ export default class APPModule extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar><Test></Test></Navbar>
         {this.props.children}
       </div>
       );

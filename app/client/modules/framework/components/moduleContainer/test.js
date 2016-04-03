@@ -1,5 +1,5 @@
 
-export default class Example extends React.Component {
+export default class Test extends React.Component {
   constructor() {
     super();
   }
@@ -7,8 +7,8 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
-        this id example!fdsf!!
+        fdfdfdgdf
       </div>
-    );
+      );
   }
 }

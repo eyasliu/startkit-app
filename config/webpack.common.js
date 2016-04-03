@@ -23,6 +23,11 @@ const commonConfig = {
   module: {
     loaders: [
       {
+        test: /\.(js|jsx)$/,
+        loader: 'babel',
+        include: [path.join(__dirname, '../app/client'), path.join(__dirname, './config')],
+        exclude: [path.join(__dirname, '../node_modules'), path.join(__dirname, '../app/client/vendor')]
+      }, {
         test: /\.css$/,
         loader: 'style-loader!css-loader?modules&importLoaders=2&localIdentName=[local]!autoprefixer-loader'
       }, {
@@ -56,9 +61,12 @@ const commonConfig = {
     //   filename: 'vendor.js'
     // }),
     // bower 文件
-    new webpack.ResolverPlugin(
-      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
-    ),
+    // new webpack.ResolverPlugin(
+    //   new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
+    // ),
+    new webpack.DefinePlugin({
+        'process.env.NODE_ENV': '"'+process.env.NODE_ENV+'"'
+    }),
     // 全局变量
     new webpack.ProvidePlugin({
       $: 'jquery',

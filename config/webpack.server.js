@@ -47,9 +47,10 @@ const webpackConfig = {
   },
   devtool: 'source-map',
   plugins: [
-    new webpack.NoErrorsPlugin()
-    // ...common.plugins,
-    // new webpack.HotModuleReplacementPlugin()
+    new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+        'process.env.NODE_ENV': '"'+process.env.NODE_ENV+'"'
+    }),
   ]
 };
 
@@ -65,5 +66,6 @@ if(process.env.NODE_ENV == 'production'){
     })
   ]
 }
+
 
 export default webpackConfig;
