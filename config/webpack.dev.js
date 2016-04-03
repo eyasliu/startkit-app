@@ -12,7 +12,10 @@ module.exports = {
       './app/client/entry.js'
     ]
   },
-  output: common.output,
+  output: {
+    ...common.output,
+    publicPath: `http://${config.host}:${config.clientPort}${common.output.publicPath}`
+  },
   resolve: common.resolve,
   module: {
     loaders: [
