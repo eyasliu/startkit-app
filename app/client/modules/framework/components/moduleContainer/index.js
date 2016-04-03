@@ -9,7 +9,7 @@ export default class APPModule extends React.Component {
   render() {
     return (
       <div>
-        <Navbar><Test></Test></Navbar>
+        <Navbar />
         {this.props.children}
       </div>
       );
