@@ -5,14 +5,13 @@ import del from 'del';
 import webpack from 'webpack';
 import run from 'run-sequence';
 import WebpackDevServer from 'webpack-dev-server';
-import webpackDevConfig from './config/webpack.dev.js';
-import webpackProConfig from './config/webpack.pro.js';
+import webpackConfig from './config/webpack.config.js';
 import config from './config/config';
 
 
 // dev server
 gulp.task('dev', ()=>{
-  const compiler = webpack(webpackDevConfig);
+  const compiler = webpack(webpackConfig);
 
   compiler.plugin('done', (stats) => {
     run('lint');
@@ -20,7 +19,7 @@ gulp.task('dev', ()=>{
 
   new WebpackDevServer( compiler, {
     contentBase: './',
-    publicPath: webpackDevConfig.output.publicPath,
+    publicPath: webpackConfig.output.publicPath,
     hot: true,
     quiet: false,
     historyApiFallback: true,
@@ -44,7 +43,7 @@ gulp.task('lint', () => {
 
 // build
 gulp.task('build', ['clean'], ()=>{
-  webpack(webpackDevConfig, (err, stats) => {
+  webpack(webpackConfig, (err, stats) => {
     console.log(stats.toString({
       chunks: false,
       colors: true
